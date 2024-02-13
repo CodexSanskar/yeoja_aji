@@ -12,6 +12,7 @@
     margin: 0;
     padding: 0;
     height: 100%;
+    
      /* prevent horizontal scroll */
 }
 
@@ -64,6 +65,25 @@
     z-index: 1; /* Ensure sections are above the video */
 }
 
+#playAudioButton {
+    background-color: #ff5050;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-family: 'Lobster', cursive;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    margin: auto; /* To center align horizontally */
+    display: block; /* Ensure the button is centered */
+}
+
+
+        #playAudioButton:hover {
+            background-color: #ff6347;
+        }
+
 
 
     </style>
@@ -85,8 +105,11 @@
             
             <img src="page1/WhatsApp Image 2024-02-13 at 23.21.47 (1).jpeg" alt="" class="section__img">
             <h1 style="font-family: 'Lobster', cursive; padding: 16px">Happy Valentine!</h1>
+           
             <img src="page1/WhatsApp Image 2024-02-13 at 23.21.47.jpeg" alt="" class="section__img">
         </div>
+        <button  id="playAudioButton">Press to vibe in!! </button>
+
     </section>
     <section class="l-section" id="section1">
         <div class="section">
@@ -139,7 +162,6 @@
                 
                 <p class="section__text">This timer will never stop as my love for you would never. ❤️</p>
             </div>
-            <button style="display: none;" id="playAudioButton">Play Audio</button>
 
            
         </div>
