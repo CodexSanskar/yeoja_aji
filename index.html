@@ -168,19 +168,7 @@
     </section>
 
    
-        <script>
-         // Simulate click on the playAudioButton when the page loads
-         window.onload = function() {
-             var audioButton = document.getElementById('playAudioButton');
-             audioButton.click();
-         };
-     
-         // Function to play the audio
-         function playAudio() {
-             var audio = document.getElementById('backgroundAudio');
-             audio.play();
-         }
-     </script>
+       
     <script>
         // Function to play the audio
         function playAudio() {
@@ -191,6 +179,7 @@
         // Add event listener to the button
         document.getElementById('playAudioButton').addEventListener('click', function() {
             playAudio();
+            document.getElementById('playAudioButton').disabled = true;
         });
     </script>
 
