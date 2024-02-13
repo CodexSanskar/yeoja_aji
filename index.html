@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax responsive landing page</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <!-- ICONS BOXICONS -->
+    <style>
+        body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+     /* prevent horizontal scroll */
+}
+
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+#video-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    background-size: cover;
+}
+
+
+#video-background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Grey overlay with 50% opacity */
+}
+
+.l-section {
+    position: relative;
+   
+     /* Add background color for sections */
+    z-index: 1; /* Ensure sections are above the video */
+}
+
+
+
+    </style>
+</head>
+<body>
+    <!-- ===== HEADER =====-->
+    <div class="video-container">
+        <video autoplay muted loop id="video-background">
+            <source src="WhatsApp Video 2024-02-14 at 00.04.51.mp4" type="video/mp4">
+            <!-- Add more <source> elements for different video formats if needed -->
+           
+        </video>
+    </div>
+    <div class="overlay"></div>
+
+    
+    <section class="l-section" id="section2">
+        <div class="section">
+            
+            <img src="page1/WhatsApp Image 2024-02-13 at 23.21.47 (1).jpeg" alt="" class="section__img">
+            <h1 style="font-family: 'Lobster', cursive; padding: 16px">Happy Valentine!</h1>
+            <img src="page1/WhatsApp Image 2024-02-13 at 23.21.47.jpeg" alt="" class="section__img">
+        </div>
+    </section>
+    <section class="l-section" id="section1">
+        <div class="section">
+            <div class="section__data">
+                <!-- <h2 class="section__title">Scaling mountains</h2> -->
+                <p class="section__text">Ankii, from the moment we started this journey on December 31, 2022, to the beautiful bond we share now since April 10, 2023, my heart has been captivated by your delicate sensitivity and remarkable intelligence. With you, I've discovered the enchanting blend of a mature, wise soul and a childlike spirit, especially when your adorable anger surfaces. Your unique combination of traits makes every moment with you precious and unforgettable. As we navigate the ups and downs, please know that my love for you is eternal, and I'm willing to wait for you forever. You're the cutest part of my life, and I cherish the idea of ending up with you, creating a lifetime of memories and love. Happy Valentine's Day, my Ankii.</p>
+            </div>
+            
+        </div>
+    </section>
+    <section class="l-section" id="section2">
+        <div class="section">
+            
+            <img style="padding: 10px;" src="page3/WhatsApp Image 2024-02-14 at 00.13.51 (1).jpeg" alt="" class="section__img">
+            <img src="page2/WhatsApp Image 2024-02-14 at 00.13.50.jpeg" alt="" class="section__img">
+        </div>
+    </section>
+
+    <section class="l-section" id="section3">
+        <div class="section">
+            <div class="section__data">
+                
+                <p class="section__text">Ankii, our love story is like a captivating K-drama, unfolding with each passing day, filled with romance, laughter, and a depth that's uniquely ours. Just as a well-scripted drama keeps you hooked, our journey together has become the most cherished narrative of my life. Your love for K-dramas mirrors the way we navigate the plot twists and turns of our relationship, making it all the more enchanting.
+
+                    Much like savoring the perfect biriyani, every moment with you is a delightful blend of flavors, creating a tapestry of joy and contentment. Your favorite dish mirrors the richness and warmth you bring into my life, making each day flavorful and memorable.
+                    
+                    Your affection for your mom is a testament to the beautiful heart you possess. The way you love and appreciate her reflects the depth of your character, and it's one of the many reasons I admire you.
+                    
+                    As we journey through life's episodes, know that you'll always have me waiting, just like a devoted viewer eagerly anticipates the next episode of their beloved show. Our story is a masterpiece, and I look forward to creating more unforgettable moments with you. Happy Valentine's Day, my Ankii.</p>
+            </div>
+           
+        </div>
+    </section>
+
+    <section class="l-section" id="section2">
+        <div class="section">
+            <video autoplay loop muted style="max-width: 100%; transform: rotate(-90deg);">
+                <source src="WhatsApp Video 2024-02-14 at 00.24.40.mp4" type="video/mp4">
+                <!-- Add more <source> elements for different video formats if needed -->
+                Your browser does not support the video tag.
+            </video>
+            
+        </div>
+    </section>
+    <section class="l-section" id="section3">
+        <div class="section">
+            <div class="section__data">
+                <h1 class="section__text" id="timer"></h1>
+
+                
+                <p class="section__text">This timer will never stop as my love for you would never. ❤️</p>
+            </div>
+           
+        </div>
+    </section>
+   
+
+    <script>
+        // Set the starting time
+        const startingTime = new Date('2022-12-31T00:00:00');
+
+        function updateTimer() {
+            // Get the current time
+            const currentTime = new Date();
+
+            // Calculate the difference in milliseconds between the starting time and current time
+            const difference = currentTime - startingTime;
+
+            // Convert milliseconds to days, hours, minutes, and seconds
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+            // Display the elapsed time
+            document.getElementById('timer').innerHTML = ` ${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds and continues...`;
+        }
+
+        // Update the timer every second
+        setInterval(updateTimer, 1000);
+    </script>
+    
+
+
+    
+   
+    <!-- RELLAX JS -->
+    <script src="assets/js/rellax.min.js"></script>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+
+    <!-- SCROLL REVEAL -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- MAIN JS -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>
