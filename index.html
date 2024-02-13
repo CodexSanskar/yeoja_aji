@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parallax responsive landing page</title>
+    <title>Happy Valentine!,Ankii</title>
     <link rel="stylesheet" href="assets/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <!-- ICONS BOXICONS -->
@@ -70,6 +70,7 @@
 </head>
 <body>
     <!-- ===== HEADER =====-->
+ 
     <div class="video-container">
         <video autoplay muted loop id="video-background">
             <source src="WhatsApp Video 2024-02-14 at 00.04.51.mp4" type="video/mp4">
@@ -79,7 +80,6 @@
     </div>
     <div class="overlay"></div>
 
-    
     <section class="l-section" id="section2">
         <div class="section">
             
@@ -139,10 +139,38 @@
                 
                 <p class="section__text">This timer will never stop as my love for you would never. ❤️</p>
             </div>
+            <button style="display: none;" id="playAudioButton">Play Audio</button>
+
            
         </div>
     </section>
+
    
+        <script>
+         // Simulate click on the playAudioButton when the page loads
+         window.onload = function() {
+             var audioButton = document.getElementById('playAudioButton');
+             audioButton.click();
+         };
+     
+         // Function to play the audio
+         function playAudio() {
+             var audio = document.getElementById('backgroundAudio');
+             audio.play();
+         }
+     </script>
+    <script>
+        // Function to play the audio
+        function playAudio() {
+            var audio = new Audio('yt1s.mp3');
+            audio.play();
+        }
+
+        // Add event listener to the button
+        document.getElementById('playAudioButton').addEventListener('click', function() {
+            playAudio();
+        });
+    </script>
 
     <script>
         // Set the starting time
@@ -168,6 +196,8 @@
         // Update the timer every second
         setInterval(updateTimer, 1000);
     </script>
+
+    
     
 
 
